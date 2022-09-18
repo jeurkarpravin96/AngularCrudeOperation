@@ -1,0 +1,91 @@
+
+<h3>student works!</h3>
+<h1>{{msg}}</h1>
+
+<div *ngIf="student">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+          <th *ngFor="let key of tabkey">{{key}}</th>
+        </tr>
+    </thead>
+    <tbody class="tbody">
+      <tr *ngFor="let arr of tabvalue">
+        <td *ngFor="let val of arr">{{val}}</td>
+     </tr>
+    </tbody>
+  </table>
+
+</div>
+<div *ngIf="listStudent">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+          <th *ngFor="let key of tabkey">{{key}}</th>
+        </tr>
+    </thead>
+      <tbody class="tbody">
+        <tr *ngFor="let arr of tabvalue">
+          <td *ngFor="let val of arr">{{val}}</td>
+       </tr>
+      </tbody>
+  </table>
+
+</div>
+
+<!-- <div class="panel panel-default" style="margin-top:10px;">
+  <div class="panel-body" style="position:relative">
+      <div class="table-responsive">
+          <table class="table">
+              <thead>
+                <tr>
+                    <th *ngFor="let key of tabkey">{{key}}</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let arr of tabvalue">
+                    <td *ngFor="let val of arr">{{val}}</td>
+                    <td>Action : <input type="radio" name="val"></td>
+                    <td>Not Action : <input type="radio" name="val"></td>
+                    Enter Mobile : <input type="text">
+                    Enter Email  : <input type="text">
+                    <span ><input type="button" value="Submit"></span>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>  -->
+
+<form>
+
+    <div class="form-group">
+        <label for="Id">
+          ID
+        </label>
+        <input class="form-control" required="" id="id" type="text" [(ngModel)]="std.id" name="id" >
+    </div>
+
+  <div class="form-group">
+    <label for="Name">
+      Name
+    </label>
+    <input class="form-control" required id="name" type="text" [(ngModel)]="std.name" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="Age">
+      AGE
+    </label>
+    <input class="form-control" required id="age" type="text" [(ngModel)]="std.age" name="age">
+  </div>
+
+  <div class="form-group">
+    <label for="Add">
+      ADD
+    </label>
+    <input class="form-control" required id="add" type="text" [(ngModel)]="std.add" name="add">
+  </div>
+
+  <button class="button" type="submit" (click)="insertStudentData()">Submit</button>
+ 
+</form>

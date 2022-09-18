@@ -1,0 +1,14 @@
+ 
+     td {    
+         padding: 0.2em 1em;    
+     }    
+  
+     th {    
+         text-align: center;    
+     }    
+  
+     thead {    
+         border-bottom: 2px solid black;    
+         cursor: pointer;    
+     }    
+ 
